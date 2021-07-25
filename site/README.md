@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### lin to figma
+### link to figma
 <a href="https://www.figma.com/proto/vtPynNXFx864gJrJXSI36H/files?node-id=2%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=2%3A2">
 https://www.figma.com/proto/vtPynNXFx864gJrJXSI36H/files?node-id=2%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=2%3A2
  </a>
