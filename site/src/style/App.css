@@ -1,0 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.image-1{
+  position: absolute;
+  width: 605px;
+  height: 404px;
+  left: 26px;
+  top: 114px;  
+  
+}

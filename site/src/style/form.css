@@ -1,0 +1,107 @@
+.div-form{
+    position: absolute;
+    width: 786px;
+    height: 440px;
+    left: 327px;
+    top: 105px;    
+    mix-blend-mode: darken;
+    border: 1px dashed #CDC7CA;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.div-form-login{
+    position: absolute;
+    width: 786px;
+    height: 386px;
+    left: 327px;
+    top: 129px;    
+    mix-blend-mode: darken;
+    border: 1px dashed #CDC7CA;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.input-email-login{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    left: 32px;
+    font-size: 24px;
+    top: 20px;    
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+
+.input-password-login{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    left: 32px;
+    top: 192px;
+    font-size: 24px;
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+.input-name{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    left: 32px;
+    font-size: 24px;
+    top: 20px;    
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+.input-avatar{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    left: 32px;
+    font-size: 24px;
+    top: 115px;    
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+
+.input-email{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    left: 32px;
+    font-size: 24px;
+    top: 210px;    
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+.input-password{
+    color: black;
+    position: absolute;
+    width: 722px;
+    height: 62px;
+    font-size: 24px;
+    left: 32px;
+    top: 305px;   
+    background: rgba(49, 214, 251, 0.87);
+    mix-blend-mode: darken;
+    border-radius: 6px;
+}
+
+.button-send{
+    position: absolute;
+    left: 315px;
+    top: 400px;
+}
+.button-send-login{
+    position: absolute;
+    left: 315px;
+    top: 324px;
+}
