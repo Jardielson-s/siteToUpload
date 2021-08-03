@@ -78,4 +78,5 @@ https://www.figma.com/proto/vtPynNXFx864gJrJXSI36H/files?node-id=2%3A2&scaling=c
 ```
 npm i react-router-dom
 npm install react-icons --save
+npm i rodal --save
 ```

@@ -1,19 +1,25 @@
 .div-file{
     position: absolute;
-    width: 1141px;
+    width: 900px;
     height: 445px;
     left: 149px;
     top: 113px;    
-    background: #FFFFFF;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 .images{
     width: 275px;
     height: 183px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
 }
 
 
 ul li{
     list-style: none;
-    display: inline-block;
+    display: inline-flex;
 }

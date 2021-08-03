@@ -105,3 +105,16 @@
     left: 315px;
     top: 324px;
 }
+
+
+#alert{
+    position: relative;
+    width: 800px;
+    height: 20px;
+    background-color: red;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    left: 80px;
+    display: none;
+}

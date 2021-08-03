@@ -4,7 +4,7 @@ import './style/App.css';
 import   Main  from './components/main';
 import   Login  from './components/login';
 import   Register  from './components/register';
-import   PageUser  from './components/pageUser';
+import  Config  from './components/config';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
             <Route path="/" exact={true} component={Main}/>
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
-            <Route path="/pageUser" component={PageUser} />
+            <Route path="/pageUser" component={Config} />
         </Switch>
     </BrowserRouter>
   );
