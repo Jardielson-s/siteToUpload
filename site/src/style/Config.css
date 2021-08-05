@@ -14,14 +14,15 @@
     position: relative;
     margin: auto;
     display: block;
-    width: 400px;
-    height: 250px;  
+    width: 395px;
+    height: 245px;  
     background-color: rgba(0,0,0,0.5);
     transition: 0.5s;
     z-index: 2;
     margin-top: -500px;
     display: none;
-    cursor: pointer;
+    overflow-x: hidden;
+    border-radius: 7px;
 }
 
 
@@ -36,9 +37,11 @@
 }
 
 
-.div-config-ul button{
-    background: rgba(49, 214, 251, 0.87);
-    color: #23859A;
+.div-config-ul-button{
+    margin: auto;
+    text-align: center;
+    background-color: rgba(49, 214, 251, 0.87);
+    color: white;
     position: relative;
     width: 298px;
     height: 78px;
@@ -46,22 +49,48 @@
     left: 61px;
     margin: 24px;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.div-config-ul button:hover{
+.div-config-ul-button-image{
+    margin: auto;
+    text-align: center;
+    background-color: rgba(49, 214, 251, 0.87);
     color: white;
+    position: relative;
+    width: 298px;
+    height: 78px;
+    font-size: 24px;
+    left: 61px;
+    margin: 24px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.div-config-ul-button-image:hover{
+    background-color: #23859A;
     cursor: pointer;
 }
-#div-config a{
+.div-config-ul-button p{
+    margin: auto;
+    font-size: 50px;
+    color: #fff;
+}
+.div-config-ul-button:hover{
+    background-color: #23859A;
+    cursor: pointer;
+}
+#div-config p{
     font-size: 30px;
     width: 50px;
-    color: aqua;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
 
-#div-config a:hover{
-    color: #ffff;
+#div-config p:hover{
+    color: #FFF;
 }
 
 .div-config-ul form {

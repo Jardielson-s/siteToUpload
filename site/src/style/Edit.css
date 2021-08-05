@@ -1,4 +1,4 @@
-#div-edit{
+#content-edit{
     display: none;
     position: absolute;
     width: 100%;
@@ -12,47 +12,19 @@
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.div-file{
+
+
+.content-edit-p{
     position: absolute;
-    width: 900px;
-    height: 445px;
-    left: 149px;
-    top: 113px;    
-    background: #fff;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
+    width: 70px;
+    font-size: 40px;
+    color: #fff;
+    top: -150px;
 }
-
-.images{
-    width: 275px;
-    height: 183px;
-    padding: 8px;
-    margin: 2px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-
-ul li{
-    list-style: none;
-    display: inline-flex;
-}
-
-.edit-X{
-    font-size: 30px;
-    width: 50px;
+.content-edit-p:hover{
     color: aqua;
-    text-decoration: none;
-    cursor: pointer;
 }
-
-.edit-X:hover{
-    color: #ffff;
-}
-
-
-#div-edit form input{
+#content-edit form input{
     width: 300px;
     height: 30px;
     padding: 5px;
@@ -62,7 +34,7 @@ ul li{
     margin: 10px;
 }
 
-#div-edit form input:hover{
+#content-edit form input:hover{
     background-color:aqua;
 }
 .button-update{
@@ -73,4 +45,12 @@ ul li{
     color: #23859A;
     border-radius: 7px;
     font-size: 20px;
+}
+
+#content-edit form label{
+    position: relative;
+    right: 18px;
+    font-size: 30px;
+    background-color: #fff;
+    border-radius: 7px;
 }

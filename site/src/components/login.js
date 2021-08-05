@@ -13,12 +13,10 @@ const Login = () =>{
     const history = useHistory();
 
     function loadEmail(e){
-       //e.prevenetDefault();
 
        setEmail(e.target.value);
     }
     function loadPassword(e){
-        //e.prevenetDefault();
  
         setPassword(e.target.value);
      }
@@ -29,11 +27,7 @@ const Login = () =>{
         }
              history.push("/pageUser");
     }
-    function alert(param){
-        if(email === "jardielsonbio@gmail.com"){
-            document.getElementById("alert").style.display = "block";
-        }
-    }
+    
     return(
         <>
         <Menu />
