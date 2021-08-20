@@ -1,9 +1,7 @@
 import React from "react";
-import '../style/Rodape.css';
-
+import '../style/Rodape.css'
 
 const Rodape = (props) => {
-
     return(
         <div className="Rodape">
             <div className="rodape-div">

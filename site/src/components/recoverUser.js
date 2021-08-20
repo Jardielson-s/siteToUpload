@@ -4,42 +4,36 @@ import ChangePage from "./changePage";
 import Menu from './menu';
 import Rodape from './rodape';
 import { FcFolder } from 'react-icons/fc';
-import { useHistory } from "react-router-dom";
 import api from '../api/axios';
 
 
 
-const Login = () =>{
+const Recover = () =>{
     
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
-    const history = useHistory();
 
     function loadEmail(e){
 
        setEmail(e.target.value);
     }
-    function loadPassword(e){
- 
-        setPassword(e.target.value);
-     }
+  
+
     async function change(e){
         e.preventDefault();
 
        try{
-             const response = await api.post('/login', {email, password})
-            
-             if(response.data.token){
-                 localStorage.setItem("token", response.data.token)
-                 history.push("/pageUser");
-             }
-         
+
+           const response = await api.post('/recoverUser', {email}) 
+           setMessage(response.data.message)
+           document.getElementById("alert").style.backgroundColor = "green";
+           return document.getElementById("alert").style.display = "block";
+
        }catch(error){
            /* debug err */
           
         
-           if(error.response.data.message === "email is invalid" || error.response.data.message === "password is invalid"){
+           if(error.response.data.message === "Unable to recover user"){
     
              setMessage(error.response.data.message)
 
@@ -63,9 +57,7 @@ const Login = () =>{
              <div id="alert"><p>{message}</p></div>
                    <fieldset className="div-form-login">
                         <form onSubmit={change}>
-                            <input className="input-email-login" type="email" placeholder="your email" value={email} onChange={loadEmail} required/>
-                            <input className="input-password-login" type="password" placeholder="your password" value={password} onChange={loadPassword} required/>
-                            <ChangePage className="button-send-login" name="send" css="button-send-login"/> <a className="recover" href="/recoverUser">recover account</a>
+                            <input className="input-email-login" type="email" placeholder="your email" value={email} onChange={loadEmail} required/>                            <ChangePage className="button-send-login" name="send" css="button-send-login"/> 
                         </form>
                   </fieldset>
         <Rodape link="http://www.linkedin.com/in/jardielson-silva-ferreira"/>
@@ -74,4 +66,4 @@ const Login = () =>{
 }
 
 
-export default Login;
+export default Recover;

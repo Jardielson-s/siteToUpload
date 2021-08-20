@@ -1,15 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import '../style/Config.css';
+import api from '../api/axios'
 import Rodape from  './rodape';
 import 'rodal/lib/rodal.css';
 import Menu from './menu';
-import { FcFolder } from 'react-icons/fc';
 import PageUser from './pageUser';
 import { useHistory } from 'react-router-dom';
 import Edit from './edit';
 
 
 const Config = (props) => {
+
+
+    const [email, setEmail] = useState("");
+    const [avatar, setAvatar] = useState("");
+    const [dataTrash, setDataTrash] = useState([]);
+    const [err,setErr] = useState();
+
+
+    useEffect(()=>{
+        async function get(){
+            try{
+                const token = localStorage.getItem('token');
+        
+                const response = await api.get('/list',{
+                    headers:{
+                        'x-access-token': token
+                    }
+                });
+               
+                setEmail(response.data.email)
+                setAvatar(response.data.avatar)
+
+
+            }catch(error){
+                /*debug error*/
+
+                //console.log(error.response.data.message)
+                //setErr("failed to authenticate token")
+            
+            }
+        }
+
+        get();
+    }, [])
 
     const [edit, setEdit] = useState("");
     const [trash, setTrash] = useState(false);
@@ -25,8 +59,11 @@ const Config = (props) => {
             }else if(edit === "Upload" || edit === "Avatar"){
                 setType("file");
                 setPlaceholder("upload: ")
-            }else{
+            }else if(edit === "Email"){
                 setType("text");
+                setPlaceholder("your new " + edit)
+            }if(edit==="Password"){
+                setType("password");
                 setPlaceholder("your new " + edit)
             }
         }
@@ -47,6 +84,7 @@ const Config = (props) => {
     }
 
     const off = () => {
+        setTrash(false)
         document.getElementById("div-config").style.display = "none";
     }
 
@@ -55,22 +93,40 @@ const Config = (props) => {
         document.getElementById("content-edit").style.display = "block";
     }
 
-    function onTrash(){
+    async function onTrash(){
+    
+          
+            try{
+                const token = localStorage.getItem('token');
+            
+                const response = await api.get('/trash',{
+                    headers:{
+                        'x-access-token': token
+                    }
+                });
+                if(response.data.uploads){
+                    return setDataTrash(response.data.uploads);
+                }
+                setDataTrash(response.data)
+                
 
+             }catch(error){
+                setErr("failed to authenticate token")
+             }
     }
 
 
 
     return (
         <>
-        <Edit name={edit }  placeholder={placeholder} type={type} />
+        <Edit name={edit}  placeholder={placeholder} type={type} />
         <div className="div-content">
         <Menu />
-        <FcFolder className="icon-1"/>
+         <img src={avatar} alt="" className="icon-1"/>
         <button className="menu-button-Config" onClick={on}> Config </button>
         <button className="menu-button-Exit" onClick={exit}> Exit </button>
         <div id="div-config">
-                <p classname="div-config-a" onClick={off}> X </p>
+                <p className="div-config-a" onClick={off}> X </p>
                 <ul className="div-config-ul">
                     <li><button className="div-config-ul-button" value="Email" onClick={e => {setEdit("Email"); onEdit();}}><p>Edit Email </p></button></li>
                     <li><button className="div-config-ul-button" value="Password" onClick={e => {setEdit("Password"); onEdit();}}><p>Edit Password </p></button></li>
@@ -81,8 +137,8 @@ const Config = (props) => {
                 </ul>
         </div>
 
-        <PageUser trash={trash}/>
-        <Rodape />
+        <PageUser trash={trash} dataTrash={dataTrash} err={err}/>
+        <Rodape link={email}/>
         </div>
         </>
     );
