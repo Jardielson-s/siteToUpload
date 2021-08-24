@@ -1,0 +1,48 @@
+.Rodape{
+    position: absolute;
+    width: 1300px;
+    height: 103px;
+    left: 0px;
+    top: 547px;  
+    justify-content: center;
+}
+
+.rodape-div{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;    
+    background: #31D6FB;
+    text-align: center;
+}
+/*
+.Link{
+    text-decoration: none;
+    position: absolute;
+    width: 911px;
+    height: 42px;
+    left: 192px;
+    top: 31px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+    color: #23859A;
+}*/
+
+.Link{
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+    color: #23859A;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    padding: 30px;
+}

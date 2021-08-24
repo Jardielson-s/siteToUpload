@@ -1,0 +1,108 @@
+.Content{
+    position: relative;
+    width: 1300px;
+    height: 650px;
+    background: #FFFFFF;
+}
+.icon-1{
+    position: absolute;
+    width: 177px;
+    height: 83px;
+    left: 0px;
+    top: 0px;  
+}
+
+.paragh{
+    position: absolute;
+    width: 571px;
+    height: 313px;
+    left: 693px;
+    top: 208px;   
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #23859A;
+}
+
+.menu-button-singIn button{
+    position: absolute;
+    width: 120px;
+    height: 45px;
+    left: 956px;
+    top: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #23859A;
+    border-radius: 7px;
+    background-color: #31D6FB;
+}
+.menu-button-singIn button:hover{
+   color: #FFFFFF;
+}
+.menu-button-singUp button{
+    position: absolute;
+    width: 135px;
+    height: 42px;
+    left: 1133px;
+    top: 32px;   
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px; 
+    color: #23859A;   
+    border-radius: 7px;
+    background-color: #31D6FB;   
+}
+.menu-button-singUp button:hover{
+    color: #FFFFFF;
+ }
+.menu-button{
+    position: absolute;
+    width: 1300px;
+    height: 85px;
+    left: 0px;
+    top: 0px;
+}
+
+.button-send button{
+    color: black;
+    width: 156px;
+    height: 42px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    background-color: #31D6FB
+}
+.button-send button:hover{
+    color: white;
+    background-color: #31D6FB;
+}
+
+
+.button-send-login button{
+    color: black;
+    width: 156px;
+    height: 42px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    background-color: #31D6FB
+}
+.button-send-login button:hover{
+    color: white;
+    background-color: #31D6FB;
+}
