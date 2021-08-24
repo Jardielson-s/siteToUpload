@@ -48,7 +48,7 @@ const Edit = (props) => {
                 alert(response.data.message);
                 document.location.reload();
             }catch(error){
-                console.log(error.response.data.message)
+//                console.log(error.response.data.message)
                 alert(error.response.data.message);
             }
 
@@ -79,8 +79,9 @@ const Edit = (props) => {
          
             const token = localStorage.getItem("token");
             try{
+               
                 if(props.name === "Email"){
-                    const response = await api.post("/update",{"email": file},{
+                    const response = await api.post("/update",{"email": confirm},{
                             headers:{
                                     'x-access-token': token
                                     }
@@ -91,7 +92,7 @@ const Edit = (props) => {
                                 document.location.reload();
 
                     }else if(props.name === "Password"){
-                            const response = await api.post("/update",{"password": file},{
+                            const response = await api.post("/update",{"password": confirm},{
                             headers:{
                                     'x-access-token': token
                                     }

@@ -50,7 +50,7 @@ const PageUser = (props) =>{
                 //setPlaceholder("type delete to confirm");
             }
             if(props.trash === true){
-                console.log(12333)
+               
                 document.getElementById("div-file").style.display = "none";
                 document.getElementById("div-file-trash").style.display = "block";
             }else if(props.trash === false){
@@ -75,10 +75,10 @@ const PageUser = (props) =>{
             
                 try{
                     const token = localStorage.getItem('token');
-                    console.log(token)
                     const response = await api.delete(`/delete/${id}`,{
                         headers:{
-                            'x-access-token': token
+                            'x-access-token': token,
+                            'Access-Control-Allow-Origin': '*'
                         }
                     });
                     offEdit();
@@ -195,7 +195,7 @@ const PageUser = (props) =>{
                       <div id="menu-image">
                           <p  onClick={offImage}> X </p>
                         <ul className="div-config-ul">
-                            <li><button className="div-config-ul-button-image" value={image} onClick={e =>{ setImage("Delete"); onEdit();}}><label>Delete image</label></button></li>
+                            <li><button className="div-config-ul-button-image" value={image} onClick={e =>{ setImage("Delete"); onEdit();}}><label>Delete File</label></button></li>
                         </ul>
                   </div>
                           { 
